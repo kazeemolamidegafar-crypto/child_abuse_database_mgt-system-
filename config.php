@@ -67,7 +67,10 @@ if (!empty($_SERVER['HTTPS'])) {
 }
 
 if (session_status() === PHP_SESSION_NONE) {
+    error_log('Session ID before start: ' . session_id());
     session_start();
+    error_log('Session ID after start: ' . session_id() . ' | CSRF in session: ' . ($_SESSION['csrf_token'] ?? 'none'));
+
 }
 
 // Enforce idle timeout
