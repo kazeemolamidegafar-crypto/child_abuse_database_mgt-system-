@@ -26,6 +26,11 @@ function env(string $key, $default = null) {
     $value = getenv($key);
     return $value === false ? $default : $value;
 }
+$sessionPath = __DIR__ . '/storage/sessions';
+if (!is_dir($sessionPath)) {
+    mkdir($sessionPath, 0700, true);
+}
+session_save_path($sessionPath);
 
 // ---------------------------------------------------------------------
 // Database connection
