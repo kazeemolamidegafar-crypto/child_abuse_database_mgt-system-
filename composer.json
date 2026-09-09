@@ -1,0 +1,17 @@
+{
+    "name": "childprotection/case-management-system",
+    "description": "Computerized Child Abuse Database Management System (PHP/MySQL prototype)",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-mbstring": "*",
+        "ext-session": "*"
+    },
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    }
+}
