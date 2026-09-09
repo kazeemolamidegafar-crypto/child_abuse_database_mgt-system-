@@ -8,6 +8,8 @@
 // ---------------------------------------------------------------------
 // Load .env (very small parser -- no external dependency required)
 // ---------------------------------------------------------------------
+ini_set('display_errors', '1');
+error_reporting(E_ALL);
 $envPath = __DIR__ . '/.env';
 if (file_exists($envPath)) {
     foreach (file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
